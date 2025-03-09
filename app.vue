@@ -1,5 +1,7 @@
 <template>
-    <AppHeader/>
+    <BarBlack/>
+    <NavBar/>
+    <!-- <AppHeader/> -->
     <NuxtPage />
     <AppFooter/>
 </template>
