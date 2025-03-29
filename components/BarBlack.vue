@@ -1,5 +1,6 @@
 <script setup>
-    const cartItem = ref(1) // Liczba produktów w koszyku, watosc poczatkowa to 1
+    const cartItem = ref(1); // Liczba produktów w koszyku, watosc poczatkowa to 1
+    const emit = defineEmits(['toggle-modal']);
 </script>
 <template>
     <nav class="navbar is-align-items-center is-black">
@@ -36,6 +37,11 @@
                     <a href="" class="navbar-item">
                         <span>Koszyk ({{ cartItem }})</span>
                     </a>
+                </div>
+                <div class="is-flex is-align-items-center cart-button has-text-white">
+                    <button @click="emit('toggle-modal')">
+                        <span>MODAL</span>
+                    </button>
                 </div>
             </div>
         </div>

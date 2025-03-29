@@ -1,10 +1,21 @@
 <script setup>
     const searchQuery = ref('');
+    const showModal = ref(false);
+
+
+    const displayModal = () => {
+        showModal.value = !showModal.value;
+    }
+
 </script>
 <template>
+
+
     <nav class="navbar">
+        <!-- is-active -->
+
         <div class="container is-flex is-align-items-center is-justify-content-space-between">
-            
+
             <div class="navbar-left is-flex is-align-items-center">
                 <img class="logo-image" src="/assets/icons/logo-black.svg" alt="Logo"/>
             </div>
@@ -21,7 +32,7 @@
                 </div>
 
                 <div class="navbar-search">
-                    <input type="text" v-model="searchQuery" placeholder="Szukaj" class="search-input">
+                    <input type="text" placeholder="Szukaj" class="search-input">
                     <button class="search-button">
                         <img src="/assets/icons/search.svg" alt="Search button"/>
                     </button>
@@ -31,6 +42,7 @@
     </nav>
 </template>
 <style scoped>
+
 .navbar {
     background-color: white;
     padding: 0.5rem 1rem;
