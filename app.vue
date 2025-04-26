@@ -1,13 +1,24 @@
-
 <script setup>
-    const stateModal = ref(false);
-    const startModal = () => {
-        stateModal.value = true
-    };
+import { ref } from 'vue';
 
-    const stopModal = () => {
-        stateModal.value = false
-    };
+useHead({
+  title: 'Nuxt 3 PWA',
+  link: [
+    { rel: 'manifest', href: '/manifest.webmanifest' }
+  ],
+  meta: [
+    { name: 'theme-color', content: '#4DBA87' }
+  ]
+})
+
+const stateModal = ref(false);
+const startModal = () => {
+    stateModal.value = true
+};
+
+const stopModal = () => {
+    stateModal.value = false
+};
 </script>
 <template>
     <BarBlack @toggle-modal="startModal"/>
